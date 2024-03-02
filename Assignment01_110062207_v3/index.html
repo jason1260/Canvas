@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <title> MyCanvas </title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <canvas id="AS1" width="720" height="400"> QAQ </canvas>
+            <canvas id="colZone" width="45" height="45"> QAQ </canvas>
+        </div>
+        <div class="color" onchange="colorChange()">
+            R<input id="cR" type="range" name="red" min="0" max="255" value="0" placeholder="r">
+            <span id='rValue'>0</span><br>
+            G<input id="cG" type="range" name="green" min="0" max="255" value="0" placeholder="g">
+            <span id="gValue">0</span><br>
+            B<input id="cB" type="range" name="blue" min="0" max="255" value="0" placeholder="b">
+            <span id="bValue">0</span><br>
+        </div>
+        <div class="width" onchange="widthChange()">
+            W<input id="wd" type="range" name="width" min="1" max="50" value="1" placeholder="w"><br>
+        </div>
+        <div class="transparency" onchange="tpChange()">
+            T<input id="tp" type="range" name="tranp" min="0" max="100" value="100" placeholder="t"><br>
+        </div>
+        <button type="button" onclick="dl()" ><img id='dl' src="./src/dl.png" width="40px" height="50px" alt="download"></button>
+        <button type="button" onclick="ul()" ><img id='ul' src="./src/ul.png" width="40px" height="50px" alt="upload"></button>
+        <button type="button" onclick="rst()"><img id='rst' src="./src/rst.png" width="40px" height="50px" alt="reset"></button>
+        <button type="button" onclick="changeMode(0)" ><img id='pen' src="./src/pen.png" width="40px" height="50px" alt="pen"></button>
+        <button type="button" onclick="changeMode(1)" ><img id='ers' src="./src/erase.png" width="40px" height="50px" alt="erase"></button>
+        <button type="button" onclick="changeMode(2)" ><img id='text' src="./src/text.png" width="40px" height="50px" alt="text"></button>
+        <button type="button" onclick="changeMode(3)" ><img id='squa' src="./src/square.png" width="40px" height="50px" alt="square"></button>
+        <button type="button" onclick="changeMode(4)" ><img id='cir' src="./src/circle.png" width="40px" height="50px" alt="circle"></button>
+        <button type="button" onclick="changeMode(5)" ><img id='tri' src="./src/triangle.png" width="40px" height="50px" alt="triangle"></button>
+        <button type="button" onclick="changeMode(6)" ><img id='line' src="./src/line.png" width="40px" height="50px" alt="line"></button>
+        <button type="button" onclick="undo()" ><img id='undo' src="./src/undo.png" width="40px" height="50px" alt="undo"></button>
+        <button type="button" onclick="redo()" ><img id='redo' src="./src/redo.png" width="40px" height="50px" alt="redo"></button><br>
+        <label for="ft">Font</label>
+        <select name="ft" id="ft" onchange="fontChange(this)">
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Arial">Arial</option>
+            <option value="Brush Script MT">Brush Script MT</option>
+            <option value="Georgia">Georgia</option>
+            <option value="微軟正黑體">Microsoft JhengHei</option>
+        </select>
+        <label for="sz">Size</label>
+        <select name="sz" id="sz" onchange="sizeChange(this)">
+            <option value="27px">27</option>
+            <option value="40px">40</option>
+            <option value="64px">64</option>
+            <option value="80px">80</option>
+            <option value="100px">100</option>
+        </select>
+        <label for="fill">Fill</label>
+        <input type="checkbox" id="fill" placeholder="fill" value="true" onchange="fill()">
+        <input type="file" id="inp" placeholder="file">
+        <script src="./index.js"></script>
+    </body>
+</html>

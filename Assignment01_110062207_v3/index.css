@@ -1,0 +1,25 @@
+#inp {
+    display: none;
+}
+#AS1 {
+    position: static;
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+#colZone {
+    position: absolute;
+    border: 1px solid #000000;
+    background-color: black;
+    left: 200px;
+    top: 420px;
+}
+img {
+    position: static;
+}
+.color {
+    position: static;
+}
+body {
+    background-color: #797f82d5;
+}
